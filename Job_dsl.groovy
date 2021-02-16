@@ -1,5 +1,5 @@
 
-job('Job001') {
+job('Job') {
     scm {
         git('https://github.com/Abbasunity/FormValidationJankins.git')
     }
