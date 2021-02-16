@@ -4,7 +4,7 @@ job('FARMVALIDATION') {
         git('https://github.com/Abbasunity/FormValidationJankins.git')
     }
     triggers {
-        scm('H/15 * * * *')
+        scm('H/5 * * * *')
     }
     steps {
         batchFile('npm install')
