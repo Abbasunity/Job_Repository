@@ -7,9 +7,9 @@ job('FARMVALIDATION JOB001') {
         scm('H/15 * * * *')
     }
     steps {
-        shell('npm install')
+        batchFile('npm install')
     }
     steps {
-        shell('npm run ng build')
+        batchFile('npm run ng build')
     }
 }
