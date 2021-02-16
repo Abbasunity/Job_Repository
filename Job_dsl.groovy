@@ -1,25 +1,15 @@
 
-job('NodeJS example') {
-
-	scm {
-		git('https://github.com/Abbasunity/FormValidationJankins') { node ->
-			node / gitConfigName('DSL User')
-			node / gitConfigEmail('abbas14uit@gmail.com')
-			
-		}
-	}
-	triggers {
-		SCM('H/5 * * * *')
-		
-	}
-	
-	wrappers {
-			
-		nodejs('nodejs')
-	}
-	
-	steps{
-		shell("npm install")
-		
-	}
+job('FARMVALIDATION JOB001') {
+    scm {
+        git('https://github.com/Abbasunity/FormValidationJankins.git')
+    }
+    triggers {
+        scm('H/15 * * * *')
+    }
+    steps {
+        shell('npm install')
+    }
+    steps {
+        shell('npm run ng build')
+    }
 }
